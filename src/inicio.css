@@ -1,0 +1,16 @@
+.inicio{
+    background-color: rgba(0,0,0, 0.8);
+    color:white;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

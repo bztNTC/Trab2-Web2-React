@@ -1,0 +1,38 @@
+.btn-cancel{
+    background-color: #D44A4D;
+    position: fixed;
+    left: 0;
+    margin-left: 25%;
+}
+
+.btn-cancel:hover{
+    background-color: brown;
+}
+
+.btn-add_game{
+    background-color: #0CAFAA;
+    position: fixed;
+    right: 0;
+    margin-right: 25%;
+}
+.btn-add_game:hover{
+    background-color: #0a7975;
+}
+
+textarea{
+    width: 80%;
+    height: 100px;
+    resize: none;
+    margin-bottom: 2em;
+    border-radius: 5px;
+}
+
+input{
+    width: 80%;
+    border-radius: 5px;
+    height: 2em;
+}
+
+button{
+    width: 120px;
+}
