@@ -21,7 +21,11 @@ const MODAL_STYLE = {
     borderRadius: '20px',
     textAlign: 'center',
     width: '350px'
+};
 
+const MODAL_STYLE_MOBILE = {
+    ...MODAL_STYLE,
+    width: '90%'
 };
 
 export default function Modal({ isOpen, setOpenModal, addGameToList }) {
@@ -30,26 +34,21 @@ export default function Modal({ isOpen, setOpenModal, addGameToList }) {
         const title = document.getElementById('title').value;
         const summary = document.getElementById('summary').value;
 
-        // Recuperar os jogos armazenados
         const storedGames = JSON.parse(localStorage.getItem('games')) || [];
 
-        // Adicionar o novo jogo à lista de jogos
         storedGames.push({ title, summary });
 
-        // Armazenar a lista atualizada no localStorage
         localStorage.setItem('games', JSON.stringify(storedGames));
 
-        // Fechar o modal
         setOpenModal(false);
 
-        // Atualizar a lista de jogos na página principal
         addGameToList();
     };
 
     if (isOpen) {
         return (
             <div style={BACKGROUND_STYLE}>
-                <div style={MODAL_STYLE}>
+                <div style={window.innerWidth <= 600 ? MODAL_STYLE_MOBILE : MODAL_STYLE}>
                     <h1>Adicionar novo jogo</h1>
                     <p>Nome do jogo</p>
                     <input id='title' required />
@@ -64,4 +63,3 @@ export default function Modal({ isOpen, setOpenModal, addGameToList }) {
 
     return null;
 }
-

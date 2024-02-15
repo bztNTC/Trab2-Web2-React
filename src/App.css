@@ -350,7 +350,7 @@ button#create-room-button:hover {
   }
 
 }.jogos-container {
-  height: 100vh;
+  height: 90vh;
   overflow-y: auto; 
 }
 

@@ -175,3 +175,12 @@ margin-top: 10px;
   align-items: center;
   margin-top: 20px;
 }
+
+.btn_cidade{
+  width: 80%;
+  margin: 1em;
+}
+
+.container{
+  height: 90vh;
+}
