@@ -111,6 +111,11 @@ export default function Salas(){
     };
 
     const handleEntrarSala = (sala) => {
+        const salaExistente = minhasSalas.find(s => s.nome === sala.nome);
+        if (salaExistente) {
+            alert("Você já está na sala.");
+            return;
+        }
         setMinhasSalas(prevMinhasSalas => [...prevMinhasSalas, sala]);
     };
     
