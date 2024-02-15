@@ -19,7 +19,8 @@ const MODAL_STYLE = {
     padding: '0px 20px 50px 20px',
     backgroundColor: '#f0f0f0',
     borderRadius: '20px',
-    textAlign: 'center'
+    textAlign: 'center',
+    width: '350px'
 
 };
 
@@ -51,9 +52,9 @@ export default function Modal({ isOpen, setOpenModal, addGameToList }) {
                 <div style={MODAL_STYLE}>
                     <h1>Adicionar novo jogo</h1>
                     <p>Nome do jogo</p>
-                    <input id='title' />
+                    <input id='title' required />
                     <p>Breve resumo</p>
-                    <textarea id='summary' /><br />
+                    <textarea id='summary' required /><br />
                     <button className='btn-cancel' onClick={() => setOpenModal(false)}>Cancelar</button>
                     <button className='btn-add_game' onClick={saveGameOnLocalStorage}>Adicionar Jogo</button>
                 </div>
